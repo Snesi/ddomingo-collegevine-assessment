@@ -1,0 +1,16 @@
+.row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.field {
+
+}
+
+.search-button-wrapper {
+  padding-bottom: 1.34375em;
+  button {
+    height: 100% !important;
+  }
+}

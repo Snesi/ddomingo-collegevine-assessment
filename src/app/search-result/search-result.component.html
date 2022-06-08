@@ -1,1 +1,6 @@
-<p>search-result works!</p>
+<mat-selection-list #colleges [multiple]="false">
+  <mat-list-option class="list-item" *ngFor="let college of collegeList" [value]="college">
+    <div class="background-image" [style.background-image]="'url(' + college.image_url + ')'"></div>
+    <h2>{{college.name}} <span *ngIf="college.distance"> - {{ college.distance | number: '1.0-2' }}mi</span></h2>
+  </mat-list-option>
+</mat-selection-list>

@@ -1,5 +1,6 @@
 <main>
-  <cv-search-bar></cv-search-bar>
-  <cv-search-result></cv-search-result>
+  <h1>CollegeVine Search</h1>
+  <cv-search-bar [longitude]="longitude$ | async" [latitude]="latitude$ | async" (coordsUpdated)="handleNewCoordinates($event)"></cv-search-bar>
+  <cv-search-result [collegeList]="collegeList$ | async" ></cv-search-result>
 </main>
 

@@ -1,1 +1,32 @@
-<p>search-bar works!</p>
+<form>
+  <div class="row">
+
+    <mat-form-field class="field" appearance="fill">
+      <mat-label>Latitude</mat-label>
+      <input matInput type="text" [(ngModel)]="latitude" name="latitude">
+      <button *ngIf="latitude" matSuffix mat-icon-button aria-label="Clear" (click)="latitude=0">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>Longitude</mat-label>
+      <input matInput type="text" [(ngModel)]="longitude" name="longitude">
+      <button *ngIf="longitude" matSuffix mat-icon-button aria-label="Clear" (click)="longitude=0">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>Radius (mi)</mat-label>
+      <input matInput type="text" [(ngModel)]="radius" name="radius">
+      <button *ngIf="radius" matSuffix mat-icon-button aria-label="Clear" (click)="radius=100">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <div class="search-button-wrapper">
+      <button mat-stroked-button (click)="handleSearchClick()">Search</button>
+    </div>
+  </div>
+</form>
+

@@ -10,7 +10,7 @@ export interface Geolocation {
 @Injectable({
   providedIn: 'root'
 })
-export class GeoLocatorService {
+export class GeolocatorService {
 
   private _userLocation$: BehaviorSubject<Geolocation> = new BehaviorSubject<Geolocation>({latitude: 0, longitude: 0});
   private isGeoLocationSupported$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
